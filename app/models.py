@@ -4,6 +4,12 @@ class Task:
         self.title = title
         self.completed = False
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "title": self.title,
+            "completed": self.completed
+        }
 
 #Testing the Task class
 task1 = Task(1, "First Task")
