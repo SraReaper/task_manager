@@ -6,3 +6,9 @@ def add_task(task):
 
 def get_all_tasks():
     return tasks
+
+def get_task_by_id(task_id):
+    for task in tasks:
+        if task.id == task_id:
+            return task
+    return None
