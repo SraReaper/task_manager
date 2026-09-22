@@ -21,3 +21,18 @@ def test_get_all_tasks(clean_storage):
 
     # Assert that the retrieved tasks match the added tasks
     assert result == [task1, task2]
+    
+def test_get_all_tasks_empty(clean_storage):
+        
+        result = get_all_tasks()
+        # Ensure the storage is empty
+        assert result == []
+        
+def test_task_to_dict():
+        task = Task(1, "Estudar Go")
+        result = task.to_dict()
+        assert result == {
+                          "id": 1,
+                          "title": "Estudar Go",
+                          "completed": False
+                          }
